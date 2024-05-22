@@ -19,3 +19,11 @@ pagination
 encryption/decryption
 profiles
 sl4j
+
+======
+Side bar categories :
+1. Home
+2. Customers
+3. Orders
+4. Products
+5. SignIn / SignOut
