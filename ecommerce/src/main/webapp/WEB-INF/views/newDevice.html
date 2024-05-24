@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="~{fragments/header :: myheader}"> NEW DEVICE </div>
+
+    <title>Devices</title>
+</head>
+<body>
+<div th:replace="~{fragments/topnav :: navbar}"></div>
+<div class="container">
+    <h1>New Device</h1>
+    <hr>
+    <h2>Save New Device</h2>
+
+    <form action="#" th:action="@{/saveDevice}" th:object="${device}" method="POST">
+
+        <input type="text" th:field="*{model}" placeholder="Device Model" class="form-control mb-4 col-4"/>
+<!--        This is add new device page.-->
+        <input type="text" th:field="*{make}" placeholder="Device Make" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{type}" placeholder="Device Type" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{price}" placeholder="Device Price" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{stockQuantity}" placeholder="Device Stock Quantity" class="form-control mb-4 col-4">
+        <button type="submit" class="btn btn-info col-2">Save Device</button>
+    </form>
+    <hr>
+    <a th:href="@{/}"> Back to Home Page</a>
+</div>
+<div th:insert="~{fragments/footer :: myfooter}"> </div>
+</div>
+</body>
+</html>
