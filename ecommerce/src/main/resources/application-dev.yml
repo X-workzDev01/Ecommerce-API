@@ -1,0 +1,15 @@
+spring:
+  #    profiles:
+  #        active: dev
+  application:
+    name: ecommerce
+  datasource:
+    url: jdbc:mysql://localhost:3306/ecomm_dev
+    username: root
+    password: X-workZodc@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    #    properties:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+      ddl-auto: update
