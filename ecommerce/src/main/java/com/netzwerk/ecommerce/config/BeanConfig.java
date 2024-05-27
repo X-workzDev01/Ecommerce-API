@@ -27,7 +27,7 @@ public class BeanConfig implements WebMvcConfigurer, ApplicationContextAware {
 
     private ApplicationContext applicationContext;
 
-    private static final String VIEWS = "/WEB-INF/views/";
+    private static final String VIEWS = "/WEB-INF/templates/";
     private static final String RESOURCES_LOCATION = "/resources/";
     private static final String RESOURCES_HANDLER = RESOURCES_LOCATION + "**";
 
