@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<!--<head>-->
-<!--    <div th:replace="~{fragments/header :: myheader}"> INVENTORY</div>-->
-<!--    <title>HomePage</title>-->
-<!--</head>-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <div th:replace="~{fragments/layout :: myheader}"> INVENTORY</div>
+    <title>HomePage</title>
+</head>
 
 <body id="page-top">
-<!--&lt;!&ndash; Page Wrapper &ndash;&gt;-->
-<!--<div id="wrapper">-->
-<!--    &lt;!&ndash; Sidebar &ndash;&gt;-->
-<!--    <ul th:replace="~{fragments/sidebar :: mysidebar}"></ul>-->
-<!--    &lt;!&ndash; End of Sidebar &ndash;&gt;-->
+<!-- Page Wrapper -->
+<div id="wrapper">
+    <!-- Sidebar -->
+    <ul th:replace="~{fragments/layout :: mysidebar}"></ul>
+    <!-- End of Sidebar -->
 
-<!--    &lt;!&ndash; Content Wrapper &ndash;&gt;-->
-<!--    <div id="content-wrapper" class="d-flex flex-column">-->
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column" >
 
-<!--        &lt;!&ndash; Main Content &ndash;&gt;-->
-<!--        <div id="content">-->
+        <!-- Main Content -->
+        <div id="content" th:replace="~{fragments/layout :: mycontent}">
 
-<!--            &lt;!&ndash; Topbar &ndash;&gt;-->
-<!--            <nav th:replace="~{fragments/topbar :: mynavbar}"></nav>-->
-<!--            &lt;!&ndash; End of Topbar &ndash;&gt;-->
+            <!-- Topbar -->
+            <nav th:replace="~{fragments/layout :: mynavbar}"></nav>
+            <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
-            <div th:fragment="content" class="container-fluid">
+            <div class="container-fluid" >
 
                 <h3>Devices List</h3>
                 <a th:href="@{/addNew}" class="btn btn-primary btn-sm mb-3">Add New Device</a>
@@ -58,11 +58,11 @@
         </div>
         <!-- End of Main Content -->
 
-<!--    </div>-->
-<!--</div>-->
-<!--&lt;!&ndash; Footer &ndash;&gt;-->
-<!--<footer th:replace="~{fragments/footer :: myfooter}">-->
-<!--</footer>-->
-<!--&lt;!&ndash; End of Footer &ndash;&gt;-->
+    </div>
+</div>
+<!-- Footer -->
+<footer th:replace="~{fragments/layout :: myfooter}">
+</footer>
+<!-- End of Footer -->
 </body>
 </html>

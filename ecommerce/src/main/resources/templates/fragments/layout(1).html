@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 
-    <meta charset="UTF-8"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-          crossorigin="anonymous"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/app.css}" rel="stylesheet" />
+    <script th:src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}" defer></script>
+    <script th:src="@{/js/app.js}" defer></script>
 
-    <title></title>
+    <title th:replace="${title}" ></title>
 </head>
 <body>
 <!--Header start-->
@@ -20,6 +23,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" th:href="@{/}">Netzwerk</a>
+
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -46,6 +50,7 @@
                 <i class="fas fa-laugh-wink"></i>
             </div>
             <div class="sidebar-brand-text mx-3">NETZWERK</div>
+            <img src="/netzwerk-logo.svg" th:href="@{/}"/>
         </a>
 
         <!-- Divider -->
@@ -90,6 +95,28 @@
     </ul>
 </div>
 <!-- Sidebar end-->
+<!-- Content start-->
+<div th:fragment="mycontent" id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+        <!-- Topbar -->
+        <nav th:replace="~{fragments/layout :: mynavbar}"></nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div layout:fragment="content" />
+
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+
+</div>
+<!-- Content end-->
 <!-- Navigation bar -->
 <div th:fragment="mynavbar">
     <nav class="navbar navbar-light bg-light">
@@ -103,7 +130,7 @@
 </div>
 <!-- Navigation end-->
 <!-- Footer-->
-<div th:fragment="myfooter">&copy; A Product of X-Workz</div>
+<div th:fragment="myfooter">Copyright 2024 &copy; A Product of X-Workz</div>
 <!-- Footer end-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <div th:replace="~{fragments/header :: myheader}"> NEW DEVICE </div>
+    <div th:replace="~{fragments/layout :: myheader}"> NEW DEVICE </div>
 
     <title>Devices</title>
 </head>
 <body>
-<div th:replace="~{fragments/topnav :: mynavbar}"></div>
-<div class="container">
+<div th:replace="~{fragments/layout :: mynavbar}"></div>
+<div th:replace="~{fragments/layout :: mycontent}" class="container">
     <h1>New Device</h1>
     <hr>
     <h2>Save New Device</h2>
@@ -25,7 +25,7 @@
     <hr>
     <a th:href="@{/}"> Back to Home Page</a>
 </div>
-<div th:insert="~{fragments/footer :: myfooter}"> </div>
+<div th:insert="~{fragments/layout :: myfooter}"> </div>
 </div>
 </body>
 </html>
