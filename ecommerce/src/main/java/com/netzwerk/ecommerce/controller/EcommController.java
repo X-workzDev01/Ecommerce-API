@@ -51,6 +51,11 @@ public class EcommController {
 
     }
 
+    @RequestMapping("/products")
+    public String products() {
+        return "products";
+    }
+
     //Testing using postman
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save(@RequestBody EcommDTO dto){
