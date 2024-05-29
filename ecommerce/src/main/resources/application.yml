@@ -1,6 +1,11 @@
 spring:
   profiles:
     active: dev
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    cache: false
 #  application:
 #    name: ecommerce
 #  datasource:

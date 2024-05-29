@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="layout :: mainContent">
 <head>
-    <meta charset="UTF-8"/>
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Update User</title>
 </head>
 <body>
+<h2>
+    Update User details
+</h2>
+
 <form action="#" method="post" th:action="@{/update/{id}(id=${user.id})}" th:object="${user}">
     <label for="name">Name</label>
     <input id="name" placeholder="Name" th:field="*{name}" type="text">

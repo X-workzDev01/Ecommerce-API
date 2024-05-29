@@ -53,7 +53,19 @@ public class EcommController {
 
     @RequestMapping("/products")
     public String products() {
-        return "products";
+        return "redirect:/";
+    }
+
+    @GetMapping("/dashboard")
+    public String dashboard(Model model) {
+        model.addAttribute("username", "User 1");
+        return "redirect:/";
+    }
+
+    @GetMapping("/orders")
+    public String orders(Model model) {
+        model.addAttribute("username", "User 2");
+        return "redirect:/";
     }
 
     //Testing using postman
