@@ -26,7 +26,6 @@ public class EcommController {
     @GetMapping("/addNew")
     public String addNewDevice(Model model){
         model.addAttribute("device", new EcommDTO());
-
         return "newDevice";
     }
 
