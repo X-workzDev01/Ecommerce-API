@@ -11,22 +11,42 @@
 </head>
 <body>
 <header th:replace="~{fragments/layout.html :: myHeader}"></header>
-<h1>New Device</h1>
-<hr>
-<h2>Save New Device</h2>
 
-<form action="#" th:action="@{/saveDevice}" th:object="${device}" method="POST">
+<div class="container-fluid">
+    <div class="row">
+        <nav th:replace="~{fragments/layout.html :: mySidebar}"></nav>
 
-    <input type="text" th:field="*{model}" placeholder="Device Model" class="form-control mb-4 col-4"/>
-    <!--        This is add new device page.-->
-    <input type="text" th:field="*{make}" placeholder="Device Make" class="form-control mb-4 col-4">
-    <input type="text" th:field="*{type}" placeholder="Device Type" class="form-control mb-4 col-4">
-    <input type="text" th:field="*{price}" placeholder="Device Price" class="form-control mb-4 col-4">
-    <input type="text" th:field="*{stockQuantity}" placeholder="Device Stock Quantity" class="form-control mb-4 col-4">
-    <button type="submit" class="btn btn-info col-2">Save Device</button>
-</form>
-<hr>
-<a th:href="@{/}"> Back to Home Page</a>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">
+                    <img th:src="@{/images/netzwerk_logo.png}" width="100" height="50"
+                         class="d-inline-block align-top me-2">
+                    -NETZWERK-
+                </h1>
+            </div>
+
+            <h1 th:replace="~{fragments/layout.html :: mainContent}">New Device</h1>
+
+            <h2>Save New Device</h2>
+
+            <form action="#" th:action="@{/saveDevice}" th:object="${device}" method="POST">
+
+                <input type="text" th:field="*{model}" placeholder="Device Model" class="form-control mb-4 col-4"/>
+                <!--        This is add new device page.-->
+                <input type="text" th:field="*{make}" placeholder="Device Make" class="form-control mb-4 col-4">
+                <input type="text" th:field="*{type}" placeholder="Device Type" class="form-control mb-4 col-4">
+                <input type="text" th:field="*{price}" placeholder="Device Price" class="form-control mb-4 col-4">
+                <input type="text" th:field="*{stockQuantity}" placeholder="Device Stock Quantity" class="form-control mb-4 col-4">
+                <button type="submit" class="btn btn-info col-2">Save Device</button>
+            </form>
+            <hr>
+            <a th:href="@{/}"> Back to Home Page</a>
+
+        </main>
+    </div>
+</div>
+
+
 <footer th:replace="~{fragments/layout.html :: myFooter}"></footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
@@ -34,5 +54,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/0402c83f68.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
