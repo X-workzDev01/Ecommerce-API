@@ -29,6 +29,7 @@ public class EcommController {
         return "newDevice";
     }
 
+
     @PostMapping("/saveDevice")
     public String saveDevice( EcommDTO dto, Model model){
         model.addAttribute("device", dto);

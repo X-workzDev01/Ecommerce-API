@@ -1,45 +1,45 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="icon" type="image/ico" th:href="@{../static/images/favicon.ico}"/>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="https://www.thymeleaf.org/">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8"/>-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"-->
+<!--          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">-->
+<!--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet"/>-->
+<!--    <link rel="icon" type="image/ico" th:href="@{../static/images/favicon.ico}"/>-->
 
-    <title>Registration Page</title>
-</head>
-<body>
-<header th:replace="~{fragments/layout.html :: myHeader}"></header>
-<div class="container-fluid">
-    <div class="row">
-        <nav th:replace="~{fragments/layout.html :: mySidebar}"></nav>
+<!--    <title>Registration Page</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<header th:replace="~{fragments/layout.html :: myHeader}"></header>-->
+<!--<div class="container-fluid">-->
+<!--    <div class="row">-->
+<!--        <nav th:replace="~{fragments/layout.html :: mySidebar}"></nav>-->
 
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <div th:replace="~{fragments/layout.html :: mainContent}">
-                <form th:action="@{/registration}" method="post" th:object="${user}">
-                    <input name="username" type="text" placeholder="Username">
-                    <input name="password" type="password" placeholder="Password">
-                    <input type="submit" value="Register">
-                </form>
-            </div>
-        </main>
-    </div>
-</div>
+<!--        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">-->
+<!--            <div th:replace="~{fragments/layout.html :: mainContent}">-->
+<!--                <form th:action="@{/registration}" method="post" th:object="${user}">-->
+<!--                    <input name="username" type="text" placeholder="Username">-->
+<!--                    <input name="password" type="password" placeholder="Password">-->
+<!--                    <input type="submit" value="Register">-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </main>-->
+<!--    </div>-->
+<!--</div>-->
 
-<a th:href="@{/}">Back to Home Page</a>
-<a th:href="@{/login}">Login</a>
+<!--<a th:href="@{/}">Back to Home Page</a>-->
+<!--<a th:href="@{/login}">Login</a>-->
 
 
-<footer th:replace="~{fragments/layout.html :: myFooter}"></footer>
+<!--<footer th:replace="~{fragments/layout.html :: myFooter}"></footer>-->
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/0402c83f68.js" crossorigin="anonymous"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"-->
+<!--        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--<script src="https://kit.fontawesome.com/0402c83f68.js" crossorigin="anonymous"></script>-->
 
-</body>
-</html>
+<!--</body>-->
+<!--</html>-->

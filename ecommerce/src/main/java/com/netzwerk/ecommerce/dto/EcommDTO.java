@@ -5,7 +5,6 @@ import lombok.*;
 
 
 @RequiredArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "development")
 public class EcommDTO  {
