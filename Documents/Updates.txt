@@ -19,3 +19,13 @@ pagination
 encryption/decryption
 profiles
 sl4j
+
+
+====
+
+Jquery : validations
+Ajax call 
+audit column's
+email integration
+
+
