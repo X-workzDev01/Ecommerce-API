@@ -18,6 +18,7 @@ public class UserServ {
     private final PasswordEncoder passwordEncoder;
 
     public void register(UserModel user){
+        user.setRole("USER");
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         users.add(user);
     }
