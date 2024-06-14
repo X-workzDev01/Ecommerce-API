@@ -27,7 +27,7 @@ public class TallyController {
                 " <BODY>" +
                 "  <EXPORTDATA>" +
                 "   <REQUESTDESC>" +
-                "    <REPORTNAME>List of Ledgers</REPORTNAME>" +
+                "    <REPORTNAME>SampleCompany Reports</REPORTNAME>" +
                 "   </REQUESTDESC>" +
                 "  </EXPORTDATA>" +
                 " </BODY>" +
