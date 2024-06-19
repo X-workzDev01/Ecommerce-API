@@ -1,6 +1,5 @@
 package com.netzwerk.ecommerce.controller;
 
-
 import com.netzwerk.ecommerce.serv.TallyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,24 +14,7 @@ public class TallyController {
 
     @GetMapping("/ledgers")
     public String getLedgers() {
-        String xmlRequest = createLedgerRequest();
-        return tallyService.sendRequestToTally(xmlRequest);
+        return tallyService.getLedgers();
     }
-
-    private String createLedgerRequest() {
-        return "<ENVELOPE>" +
-                " <HEADER>" +
-                "  <TALLYREQUEST>Export Data</TALLYREQUEST>" +
-                " </HEADER>" +
-                " <BODY>" +
-                "  <EXPORTDATA>" +
-                "   <REQUESTDESC>" +
-                "    <REPORTNAME>SampleCompany Reports</REPORTNAME>" +
-                "   </REQUESTDESC>" +
-                "  </EXPORTDATA>" +
-                " </BODY>" +
-                "</ENVELOPE>";
-    }
-
 
 }
